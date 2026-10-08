@@ -59,7 +59,7 @@ section {
 	margin-bottom: 48px;
 }
 
-section:not(#hero) {
+section:not(#home) {
 	border-top: 1px solid rgba(241, 245, 249, 0.08);
 }
 
@@ -94,6 +94,17 @@ section:not(#hero) {
 .btn-small {
 	padding: 8px 18px;
 	font-size: 0.85rem;
+}
+
+[data-reveal] {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-reveal].is-visible {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 /* NavBar */
@@ -150,11 +161,12 @@ section:not(#hero) {
 .nav-link {
 	display: inline-flex;
 	align-items: center;
+	height: 50px;
+	border-bottom: 1px solid transparent;
 	font-size: 0.9rem;
 	font-weight: 500;
 	color: var(--text-muted);
 	transition: color var(--transition);
-	height: 50px;
 }
 
 .nav-link:hover,
@@ -172,8 +184,8 @@ section:not(#hero) {
 	cursor: pointer;
 }
 
-/* Hero Section */
-#hero {
+/* home Section */
+#home {
 	max-width: var(--max-width);
 	height: 100vh;
 	margin: 0 auto;
@@ -184,29 +196,29 @@ section:not(#hero) {
 	gap: 48px;
 }
 
-.hero-text {
+.home-text {
 	flex: 1;
 	max-width: 560px;
 }
 
-.hero-name {
+.home-name {
 	font-size: 3.8rem;
 	margin-bottom: 8px;
 }
 
-.hero-title {
+.home-title {
 	font-size: 1.3rem;
 	color: var(--secondary-color);
 	font-weight: 500;
 	margin-bottom: 42px;
 }
 
-.hero-desc {
+.home-desc {
 	color: var(--text-muted);
 	margin-bottom: 42px;
 }
 
-.hero-buttons {
+.home-buttons {
 	display: flex;
 	gap: 16px;
 	margin-bottom: 42px;
@@ -226,7 +238,7 @@ section:not(#hero) {
 	color: var(--secondary-color);
 }
 
-.hero-photo img {
+.home-photo img {
 	width: 400px;
 	height: 400px;
 	border-radius: 50%;
@@ -333,6 +345,12 @@ section:not(#hero) {
 	font-size: 0.8rem;
 	padding: 6px 12px;
 	border-radius: 999px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.tag:hover {
+	transform: scale(1.1);
 }
 
 /* Projects Section */
@@ -609,19 +627,19 @@ section:not(#hero) {
 		gap: 20px;
 	}
 
-	#hero {
+	#home {
 		flex-direction: column-reverse;
 		text-align: center;
 		padding-top: 80px;
 		height: fit-content;
 	}
 
-	.hero-buttons,
+	.home-buttons,
 	.social-row {
 		justify-content: center;
 	}
 
-	.hero-photo img {
+	.home-photo img {
 		width: 200px;
 		height: 200px;
 	}

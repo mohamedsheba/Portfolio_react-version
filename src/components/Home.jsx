@@ -1,6 +1,6 @@
-import heroImage from "../assets/hero-img.jpg";
+import homeImage from "../assets/home-img.jpg";
 
-export default function Hero() {
+export default function Home() {
     const socialLinks = [
         { name: "linkedIn", url: "https://www.linkedin.com/in/mohamed-sheba" },
         { name: "Github", url: "https://github.com/mohamedsheba" },
@@ -8,18 +8,18 @@ export default function Hero() {
     ]
 
     return (
-        <section id="hero">
-            <div className="hero-text">
-                <h1 className="hero-name" data-reveal>Mohamed Sheba</h1>
-                <p className="hero-title" data-reveal>Frontend Developer</p>
-                <p className="hero-desc" data-reveal>
+        <section id="home" className="home">
+            <div className="home-text">
+                <h1 className="home-name" data-reveal>Mohamed Sheba</h1>
+                <p className="home-title" data-reveal>Frontend Developer</p>
+                <p className="home-desc" data-reveal>
                     I'm Mohamed — a Front-End Developer building clean, responsive, and user-friendly
                     websites. Currently sharpening my skills through the DEPI React track, with a solid
                     foundation in HTML, CSS and JavaScript
                     I care about turning designs into interfaces that just feel right to use.
                 </p>
 
-                <div className="hero-buttons" data-reveal>
+                <div className="home-buttons" data-reveal>
                     <a href="#projects" className="btn btn-primary">View My Work</a>
                     <a href="#contact" className="btn btn-secondary">Contact Me</a>
                 </div>
@@ -60,8 +60,8 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className="hero-photo">
-                <img src={heroImage} alt="Mohamed Sheba" />
+            <div className="home-photo">
+                <img src={homeImage} alt="Mohamed Sheba" />
             </div>
         </section>
     )
