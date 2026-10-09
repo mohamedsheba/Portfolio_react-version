@@ -39,7 +39,7 @@ export default function Contact() {
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [status, setStatus] = useState("")
 
-    async function handleSubmit(e){
+    async function handleSubmit(e) {
         e.preventDefault()
         setIsSubmitting(true)
         const data = {
@@ -53,13 +53,13 @@ export default function Contact() {
             {
                 method: "POST",
                 headers: {
-                    "Content-Type" : "application/json"
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify(data)
             }
         )
 
-        if(response.ok){
+        if (response.ok) {
             setStatus("success")
             setName("")
             setEmail("")
@@ -72,7 +72,14 @@ export default function Contact() {
 
     return (
         <section className="contact" id="contact">
-            <h2 className="section-title" data-reveal>Contact</h2>
+
+            <div className="section-heading" data-reveal>
+                <span className="section-eyebrow">Have a Project in Mind?</span>
+                <h2 className="section-title">GET IN TOUCH</h2>
+                <p>
+                    I'm always open to discussing new projects, creative ideas, and opportunities to collaborate.
+                </p>
+            </div>
 
             <div className="contact-grid">
 

@@ -4,22 +4,22 @@ export default function Skills() {
     const cards = [
         {
             title: "Frontend Development",
-            description: "Technologies I use to build modern web interfaces.",
+            description: "Building responsive and interactive web interfaces with modern frontend technologies.",
             icon: "code",
             featured: true,
             tags: [
-                "HTML5",
-                "CSS3",
+                "HTML",
+                "CSS",
                 "JavaScript",
                 "React",
                 "Bootstrap",
-                "Tailwind CSS",
+                "Tailwind",
                 "TypeScript"
             ]
         },
         {
             title: "CS Fundamentals",
-            description: "Problem solving and computational thinking.",
+            description: "Developing logical thinking and breaking down problems into clear, efficient solutions.",
             icon: "brain",
             tags: [
                 "Problem Solving",
@@ -29,7 +29,7 @@ export default function Skills() {
         },
         {
             title: "Development Workflow",
-            description: "Tools for building and managing projects.",
+            description: "Managing project workflows, running development environments, and working with version control.",
             icon: "git",
             tags: [
                 "Git",
@@ -40,7 +40,7 @@ export default function Skills() {
         },
         {
             title: "Software Engineering",
-            description: "Writing organized and maintainable code.",
+            description: "Creating reusable components and maintaining clean, organized code for easier updates and future improvements.",
             icon: "layers",
             wide: true,
             tags: [
@@ -54,8 +54,8 @@ export default function Skills() {
 
     return (
         <section className="skills" id="skills">
-            <div className="skills-heading" data-reveal>
-                <span className="skills-eyebrow">WHAT I WORK WITH</span>
+            <div className="section-heading" data-reveal>
+                <span className="section-eyebrow">WHAT I WORK WITH</span>
                 <h2 className="section-title">Skills & Technologies</h2>
                 <p>
                     The technologies, tools, and concepts I use

@@ -1,3 +1,29 @@
+:root {
+    /* Backgrounds */
+    --bg-color: #0B1120;
+    --card-bg: #151F33;
+
+    /* Text */
+    --text-color: #F1F5F9;
+    --text-muted: #94A3B8;
+
+    /* Electric blue */
+    --accent-color: #3B82F6;
+    --secondary-color: #60A5FA;
+    --accent-glow: rgba(59, 130, 246, 0.18);
+
+    /* Fonts */
+    --font-heading: 'Sora', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Layout */
+    --max-width: 1100px;
+    --radius: 14px;
+
+    /* Motion */
+    --transition: 0.3s ease-in-out;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
