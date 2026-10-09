@@ -25,115 +25,6 @@
     --transition: 0.3s ease;
 }
 
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-html {
-	scroll-behavior: smooth;
-}
-
-body {
-	font-family: var(--font-body);
-	line-height: 1.6;
-	color: var(--text-color);
-    background-color: #0B1120;
-    background-image:
-        radial-gradient(
-            ellipse at 70% 35%,
-            rgba(59, 130, 246, 0.16),
-            transparent 55%
-        ),
-        linear-gradient(
-            rgba(148, 163, 184, 0.07) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(148, 163, 184, 0.07) 1px,
-            transparent 1px
-        );
-
-    background-size:
-        auto,
-        40px 40px,
-        40px 40px;
-}
-
-h1,
-h2,
-h3 {
-	font-family: var(--font-heading);
-	line-height: 1.2;
-}
-
-a {
-	color: inherit;
-	text-decoration: none;
-}
-
-img {
-	max-width: 100%;
-	display: block;
-}
-
-section {
-	max-width: var(--max-width);
-	margin: 0 auto;
-	padding: 80px 24px;
-}
-
-.section-title {
-	font-size: 2rem;
-	margin-bottom: 48px;
-}
-
-.btn {
-	display: inline-block;
-	padding: 12px 24px;
-	border-radius: 999px;
-	font-weight: 600;
-	font-size: 0.95rem;
-	transition: transform var(--transition), background-color var(--transition), color var(--transition);
-}
-
-.btn-primary {
-	background-color: var(--accent-color);
-	color: #0F172A;
-}
-
-.btn-primary:hover {
-	transform: scale(1.02);
-}
-
-.btn-secondary {
-	border: 1px solid var(--secondary-color);
-	color: var(--secondary-color);
-}
-
-.btn-secondary:hover {
-	background-color: rgba(56, 189, 248, 0.1);
-	transform: scale(1.02);
-}
-
-.btn-small {
-	padding: 8px 18px;
-	font-size: 0.85rem;
-}
-
-[data-reveal] {
-	opacity: 0;
-	transform: translateY(30px);
-	transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-[data-reveal].is-visible {
-	opacity: 1;
-	transform: translateY(0);
-}
-
 /* NavBar */
 .navbar {
     position: fixed;
@@ -406,43 +297,236 @@ section {
 	grid-row-start: 2;
 }
 
-/* Skills */
+
+/* Skills Section */
+
+.skills {
+    position: relative;
+}
+
+.skills-heading {
+    max-width: 620px;
+    margin-bottom: 40px;
+}
+
+.skills-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--accent-color);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.skills-heading .section-title {
+    margin-bottom: 14px;
+}
+
+.skills-heading p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    max-width: 520px;
+}
+
 .skills-grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
 }
 
 .skill-card {
-	background-color: transparent;
-	border: 1px solid rgba(241, 245, 249, 0.12);
-	border-radius: var(--radius);
-	padding: 28px;
+    position: relative;
+    isolation: isolate;
+    min-width: 0;
+    overflow: hidden;
+
+    padding: 28px;
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    border-radius: var(--radius);
+
+    background: linear-gradient(
+        145deg,
+        rgba(21, 31, 51, 0.92),
+        rgba(15, 23, 42, 0.82)
+    );
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background-color var(--transition);
+}
+
+.skill-card-featured {
+    grid-column: 1 / -1;
+    padding: 32px;
+    background: linear-gradient(
+        120deg,
+        rgba(30, 58, 95, 0.48),
+        rgba(21, 31, 51, 0.92) 65%
+    );
+    border-color: rgba(59, 130, 246, 0.28);
+}
+
+.skill-card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -90px;
+    right: -90px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.09);
+    filter: blur(55px);
+    opacity: 0;
+    transition: opacity var(--transition);
+    pointer-events: none;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(96, 165, 250, 0.42);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+}
+
+.skill-card:hover::before {
+	opacity: 1;
+}
+
+.skill-card-top {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.skill-card-heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .skill-card h3 {
-	font-size: 1.05rem;
-	margin-bottom: 16px;
+	margin-left: 15px;
+	font-family: var(--font-heading);
+	font-size: 1.15rem;
+	line-height: 1.4;
+	color: var(--text-color);
+}
+
+.skill-card-wide {
+    grid-column: 1 / -1;
+}
+
+.skill-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    border-radius: 12px;
+    background: rgba(59, 130, 246, 0.12);
+
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.skill-card-number {
+    color: rgba(148, 163, 184, 0.5);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+.skill-description {
+    max-width: 480px;
+    margin-bottom: 22px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.8;
 }
 
 .tag-list {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .tag {
-	background-color: rgba(56, 189, 248, 0.1);
-	color: var(--accent-color);
-	font-size: 0.8rem;
-	padding: 6px 12px;
-	border-radius: 999px;
-	cursor: pointer;
-	transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 7px 12px;
+
+    border: 1px solid rgba(148, 163, 184, 0.13);
+    border-radius: 8px;
+    background: rgba(148, 163, 184, 0.055);
+
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+
+    transition:
+        color var(--transition),
+        border-color var(--transition),
+        background-color var(--transition),
+        transform var(--transition);
 }
 
 .tag:hover {
-	transform: scale(1.1);
+    color: var(--secondary-color);
+    border-color: rgba(96, 165, 250, 0.35);
+    background: rgba(59, 130, 246, 0.09);
+    transform: translateY(-2px);
+	cursor: default;
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+    .skills-heading {
+        margin-bottom: 28px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .skill-card,
+    .skill-card-featured {
+        grid-column: auto;
+        padding: 24px;
+    }
+
+    .skill-card-top {
+        margin-bottom: 20px;
+    }
+}
+
+/* Respect reduced motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .skill-card,
+    .skill-card::before,
+    .tag {
+        transition: none;
+    }
+
+    .skill-card:hover,
+    .tag:hover {
+        transform: none;
+    }
 }
 
 /* Projects Section */
@@ -715,9 +799,13 @@ section {
 		padding: 30px;
 	}
 
+	/* NavBar */
+
 	.nav-links{
 		gap: 20px;
 	}
+
+	/* Home Section */
 
 	#home {
 		flex-direction: column-reverse;
@@ -735,6 +823,8 @@ section {
 		width: 200px;
 		height: 200px;
 	}
+
+	/* About Section */
 
 	.about-grid {
 		display: grid;
@@ -772,19 +862,47 @@ section {
 		grid-row-start: 3;
 	}
 
-	.skills-grid,
+	/* Skills Section */
+
+	.skills-heading {
+        margin-bottom: 28px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .skill-card,
+    .skill-card-featured {
+        grid-column: auto;
+        padding: 24px;
+    }
+
+    .skill-card-top {
+        margin-bottom: 20px;
+    }
+
+	/* Projects Section */
+
 	.projects-grid {
 		grid-template-columns: 1fr;
 	}
+
+	/* Experience Section */
 
 	.experience-card {
 		flex-direction: column;
 		gap: 20px;
 	}
 
+	/* Contact Section */
+
 	.contact-grid {
 		grid-template-columns: 1fr;
 	}
+
+	/* Footer */
 
 	.footer-grid {
 		grid-template-columns: 1fr;
@@ -798,7 +916,7 @@ section {
 	}
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 	.navbar {
 		left: 20px;
 		right: 20px;
@@ -833,7 +951,6 @@ section {
 	}
 }
 
-/* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
 	* {
 		transition: none !important;
