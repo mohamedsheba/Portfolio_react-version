@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import homeImage from "../assets/home-img.jpg";
 
 export default function Home() {
@@ -6,6 +7,26 @@ export default function Home() {
         { name: "Github", url: "https://github.com/mohamedsheba" },
         { name: "Email", url: "mailto:mohamed.sheba101@gmail.com" }
     ]
+
+    useEffect(() => {
+        const homeElements = document.querySelectorAll(
+            '.home [data-reveal]'
+        );
+
+        const timers = [];
+
+        homeElements.forEach((el, index) => {
+            const timer = setTimeout(() => {
+                el.classList.add('is-visible');
+            }, index * 200);
+
+            timers.push(timer);
+        });
+
+        return () => {
+            timers.forEach(clearTimeout);
+        };
+    }, []);
 
     return (
         <section id="home" className="home">

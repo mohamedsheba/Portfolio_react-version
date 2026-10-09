@@ -14,7 +14,9 @@ function App() {
 
 	useEffect(() => {
 
-		const revealElements = document.querySelectorAll('[data-reveal]');
+		const revealElements = document.querySelectorAll(
+			'[data-reveal]:not(.home [data-reveal])'
+		);
 
 		const revealObserver = new IntersectionObserver((entries, observer) => {
 			entries.forEach(entry => {
@@ -23,7 +25,7 @@ function App() {
 					observer.unobserve(entry.target);
 				}
 			});
-		}, {threshold: 0.15})
+		}, { threshold: 0.15 })
 
 		revealElements.forEach((el) => revealObserver.observe(el))
 	}, [])
