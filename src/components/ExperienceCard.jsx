@@ -4,7 +4,10 @@ export default function ExperienceCard({ status, title, organization, date, desc
         <div className="experience-card" data-reveal>
 
             <div className="experience-info">
-                <span className="tag">{status}</span>
+                <span className="tag experience-status">
+                    <span className="status-dot"></span>
+                    {status}
+                </span>
                 <h3>{title}</h3>
                 <p className="experience-org">{organization}</p>
                 <p className="experience-date">{date}</p>
