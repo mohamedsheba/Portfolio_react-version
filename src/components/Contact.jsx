@@ -40,34 +40,40 @@ export default function Contact() {
     const [status, setStatus] = useState("")
 
     async function handleSubmit(e) {
-        e.preventDefault()
-        setIsSubmitting(true)
-        const data = {
-            name,
-            email,
-            message
-        }
+        e.preventDefault();
 
-        const response = await fetch(
-            "https://formspree.io/f/xyeydone",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(data)
+        setIsSubmitting(true);
+        setStatus("");
+
+        const data = { name, email, message };
+
+        try {
+            const response = await fetch(
+                "https://formspree.io/f/xyeydone",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json"
+                    },
+                    body: JSON.stringify(data)
+                }
+            );
+
+            if (!response.ok) {
+                throw new Error("Failed to send message");
             }
-        )
 
-        if (response.ok) {
-            setStatus("success")
-            setName("")
-            setEmail("")
-            setMessage("")
-        } else {
-            setStatus("error")
+            setStatus("success");
+            setName("");
+            setEmail("");
+            setMessage("");
+        } catch (error) {
+            setStatus("error");
+            console.log(error)
+        } finally {
+            setIsSubmitting(false);
         }
-        setIsSubmitting(false)
     }
 
     return (
@@ -104,7 +110,10 @@ export default function Contact() {
                                     type={input.type}
                                     id={input.name}
                                     name={input.name}
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    onChange={(e) => {
+                                        setName(e.target.value);
+                                        setStatus("");
+                                    }}
                                     value={email}
                                     required
                                 />
@@ -146,7 +155,6 @@ export default function Contact() {
                         <a
                             key={link.name}
                             href={link.url}
-                            target="_blank"
                             rel="noopener"
                             className="contact-link"
                         >
