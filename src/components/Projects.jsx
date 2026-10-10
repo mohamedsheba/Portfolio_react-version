@@ -1,19 +1,11 @@
-import MaisonSoliel from "../assets/Maison Soleil.png";
+import Portfolio from "../assets/Portfolio.png";
 import MegaTech from "../assets/MegaTech.png";
 import Lumière from "../assets/Lumière.png"
 import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
     const projects = [
-        {
-            name: "Maison Soleil",
-            imageUrl: MaisonSoliel,
-            desc: "A booking confirmation dashboard for a boutique guesthouse. Focused on matching the original UI design precisely while making it fully responsive across devices.",
-            demoLink: "https://mohamedsheba.github.io/Maison-Soleil/",
-            repoLink: "https://github.com/mohamedsheba/Maison-Soleil",
-            tags: ["HTML", "CSS"]
-        },
-
+    
         {
             name: "MegaTech",
             imageUrl: MegaTech,
@@ -21,6 +13,15 @@ export default function Projects() {
             demoLink: "https://mohamedsheba.github.io/MegaTech-Agency/",
             repoLink: "https://github.com/mohamedsheba/MegaTech-Agency.git",
             tags: ["HTML", "CSS", "JavaScript"]
+        },
+
+        {
+            name: "Personal Portfolio",
+            imageUrl: Portfolio,
+            desc: "A personal portfolio built with React to showcase my projects, skills, and experience. Features a modern dark UI, responsive layouts, and smooth animations for an engaging user experience.",
+            demoLink: "#",
+            repoLink: "#",
+            tags: ["CSS", "JavaSript", "React"]
         },
 
         {

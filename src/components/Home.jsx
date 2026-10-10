@@ -41,8 +41,17 @@ export default function Home() {
                 </p>
 
                 <div className="home-buttons" data-reveal>
-                    <a href="#projects" className="btn btn-primary">View My Work</a>
-                    <a href="#contact" className="btn btn-secondary">Contact Me</a>
+                    <a
+                        href="#projects"
+                        className="btn btn-primary">
+                        View My Work
+                    </a>
+                    <a
+                        href="/CV.pdf"
+                        download="Mohamed-Sheba-Resume.pdf"
+                        className="btn btn-secondary">
+                        Download Resume
+                    </a>
                 </div>
 
 
@@ -77,7 +86,7 @@ export default function Home() {
                             )}
                         </a>
                     ))}
-
+                    
                 </div>
             </div>
 
