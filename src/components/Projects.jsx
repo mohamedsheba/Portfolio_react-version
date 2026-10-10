@@ -1,6 +1,6 @@
-import Portfolio from "../assets/Portfolio.png";
-import MegaTech from "../assets/MegaTech.png";
-import Lumière from "../assets/Lumière.png"
+import Portfolio from "../assets/Portfolio.webp";
+import MegaTech from "../assets/MegaTech.webp";
+import Lumière from "../assets/Lumière.webp"
 import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
@@ -11,7 +11,7 @@ export default function Projects() {
             imageUrl: MegaTech,
             desc: "A digital agency website concept for a company offering web development, UI/UX design, and marketing services. Built with a clean, minimal design without heavy distractions.",
             demoLink: "https://mohamedsheba.github.io/MegaTech-Agency/",
-            repoLink: "https://github.com/mohamedsheba/MegaTech-Agency.git",
+            repoLink: "https://github.com/mohamedsheba/MegaTech-Agency",
             tags: ["HTML", "CSS", "JavaScript"]
         },
 
@@ -19,8 +19,8 @@ export default function Projects() {
             name: "Personal Portfolio",
             imageUrl: Portfolio,
             desc: "A personal portfolio built with React to showcase my projects, skills, and experience. Features a modern dark UI, responsive layouts, and smooth animations for an engaging user experience.",
-            demoLink: "#",
-            repoLink: "#",
+            demoLink: "https://mohamedsheba.github.io/Personal-Portfolio/",
+            repoLink: "https://github.com/mohamedsheba/Personal-Portfolio",
             tags: ["CSS", "JavaSript", "React"]
         },
 

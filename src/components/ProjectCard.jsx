@@ -13,6 +13,7 @@ export default function ProjectCard({
                     src={imageUrl}
                     alt={`${name} project screenshot`}
                     loading="lazy"
+                    decoding="async"
                 />
             </div>
 

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import homeImage from "../assets/home-img.jpg";
+import homeImage from "../assets/home-img.webp";
 
 export default function Home() {
     const socialLinks = [
@@ -86,7 +86,7 @@ export default function Home() {
                             )}
                         </a>
                     ))}
-                    
+
                 </div>
             </div>
 
