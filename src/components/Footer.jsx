@@ -1,31 +1,31 @@
 export default function Footer() {
     const links = [
-        {name : "About", href : "#about"},
-        {name : "Skills", href : "#skills"},
-        {name : "Projects", href : "#projects"},
-        {name : "Contact", href : "#contact"}
+        { name: "About", href: "#about" },
+        { name: "Skills", href: "#skills" },
+        { name: "Projects", href: "#projects" },
+        { name: "Contact", href: "#contact" }
     ]
 
     return (
-        <footer class="footer">
-            <div class="footer-grid">
+        <footer className="footer">
+            <div className="footer-grid">
 
-                <div class="footer-col">
-                    <h4 class="logo">Mohamed Sheba</h4>
-                    <p class="footer-tagline">Open to internships and freelance work</p>
+                <div className="footer-col">
+                    <h4 className="logo">Mohamed Sheba</h4>
+                    <p className="footer-tagline">Open to internships and freelance work</p>
                 </div>
 
-                <div class="footer-col">
+                <div className="footer-col">
                     <h4>Quick Links</h4>
 
-                    {links.map((link) => <a key={link.name} href={link.href}>{link.name}</a> )}
-                    
+                    {links.map((link) => <a key={link.name} href={link.href}>{link.name}</a>)}
+
                 </div>
 
-                <div class="footer-col">
+                <div className="footer-col">
                     <h4>Get in Touch</h4>
                     <a href="mailto:mohamed.sheba101@gmail.com">mohamed.sheba101@gmail.com</a>
-                    <div class="social-row">
+                    <div className="social-row">
                         <a href="https://www.linkedin.com/in/mohamed-sheba" target="_blank" rel="noopener"
                             aria-label="LinkedIn">
                             <svg viewBox="0 0 24 24" width="20" height="20">
@@ -50,9 +50,11 @@ export default function Footer() {
 
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2026 Mohamed Sheba. All rights reserved.</p>
-                <a href="#" class="back-to-top">Back to top</a>
+            <div className="footer-bottom">
+                <p>&copy; {new Date().getFullYear()} Mohamed Sheba. All rights reserved.</p>
+                <a href="#home" className="back-to-top">
+                    Back to top <span aria-hidden="true">↑</span>
+                </a>
             </div>
         </footer>
     )
