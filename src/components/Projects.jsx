@@ -1,4 +1,4 @@
-import Portfolio from "../assets/Portfolio.webp";
+import Portfolio from "../assets/PortFolio.webp";
 import MegaTech from "../assets/MegaTech.webp";
 import Lumière from "../assets/Lumière.webp"
 import ProjectCard from "./ProjectCard";
