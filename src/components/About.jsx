@@ -5,25 +5,25 @@ export default function About() {
         {
             numCard: 2,
             title: "Currently Focusing On",
-            description: "Building responsive interfaces and deepening my understanding of React, reusable components, and modern frontend practices."
+            description: "Improving my React skills and building responsive interfaces with reusable components."
         },
 
         {
             numCard: 3,
             title: "My Approach",
-            description: "I focus on clean, maintainable code, consistent design, and the small details that make interfaces easier to use."
+            description: "I value clean code, attention to detail, and consistent user experiences."
         },
 
         {
             numCard: 4,
             title: "Why Frontend",
-            description: "I enjoy combining logical problem-solving with creativity and seeing ideas come to life in the browser."
+            description: "I enjoy combining logic and creativity to bring ideas to life in the browser."
         },
 
         {
             numCard: 5,
             title: "What I'm Looking For",
-            description: "Opportunities to contribute to real-world projects, learn from experienced developers, and grow as a frontend developer."
+            description: "Real-world projects where I can contribute, gain experience, and grow as a developer."
         }
     ]
 
@@ -40,8 +40,8 @@ export default function About() {
             <div className="about-grid">
                 <div className="about-card-1 about-card" data-reveal>
                     <p>
-                        I'm Mohamed, a frontend developer focused on building responsive, user-friendly web interfaces.
-                        I enjoy turning designs into functional experiences while improving my skills in React, component-based development, and clean code.
+                        I'm Mohamed, a Frontend Developer passionate about building clean, responsive, and user-friendly interfaces.
+                        I enjoy turning designs into functional experiences while paying attention to detail and usability.
                     </p>
                 </div>
 

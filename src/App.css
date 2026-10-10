@@ -245,18 +245,18 @@
 }
 
 .about-card h3 {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     color: var(--secondary-color);
     font-family: var(--font-heading);
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     line-height: 1.5;
 }
 
 .about-card p {
     margin: 0;
     color: var(--text-muted);
-    font-size: 0.85rem;
-    line-height: 1.75;
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
 .about-card-1 {
@@ -281,7 +281,7 @@
 .about-card-1 p {
 	max-width: 600px;
 	color: var(--text-color);
-	font-size: clamp(1.3rem, 2vw, 1.5rem);
+	font-size: clamp(1.3rem, 2vw, 1.6rem);
 	line-height: 1.9;
 }
 
@@ -311,31 +311,6 @@
     position: relative;
 }
 
-.section-heading {
-    max-width: 620px;
-    margin-bottom: 40px;
-}
-
-.section-eyebrow {
-    display: inline-block;
-    margin-bottom: 12px;
-    color: var(--accent-color);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.section-heading .section-title {
-    margin-bottom: 14px;
-}
-
-.section-heading p {
-    color: var(--text-muted);
-    line-height: 1.8;
-    max-width: 520px;
-}
-
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -348,17 +323,14 @@
     isolation: isolate;
     min-width: 0;
     overflow: hidden;
-
     padding: 28px;
     border: 1px solid rgba(148, 163, 184, 0.14);
     border-radius: var(--radius);
-
     background: linear-gradient(
         145deg,
         rgba(21, 31, 51, 0.92),
         rgba(15, 23, 42, 0.82)
     );
-
     transition:
         transform var(--transition),
         border-color var(--transition),
@@ -436,11 +408,9 @@
     width: 46px;
     height: 46px;
     flex-shrink: 0;
-
     border: 1px solid rgba(96, 165, 250, 0.2);
     border-radius: 12px;
     background: rgba(59, 130, 246, 0.12);
-
     color: var(--secondary-color);
     font-size: 1.3rem;
     font-weight: 700;
@@ -800,7 +770,7 @@
 	.about-grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: 340px 1fr 1fr;
+		grid-template-rows: 1.5fr 1fr 1fr;
 		gap: 15px;
 		padding: 0;
 	}
@@ -814,7 +784,7 @@
 		grid-column: 1 / -1;
 		grid-row: auto;
 		margin-bottom: 30px;
-		padding: 0;
+		padding: 10;
 	}
 
 	.about-card-2 {
